@@ -35,7 +35,7 @@ dependencies {
 // To create photo album from your activity define arrayList in your attributs -
         private ArrayList<String>allPhotos = new ArrayList<>();
 	
-
+```
    
 ## API
 // Then add to it all the URLs of the photos you want:
@@ -53,8 +53,10 @@ dependencies {
 
 // to open the photo album use the openAlbum function
           MainActivityLibrary.openAlbum(MainActivity.this,allPhotos);
- 
+ ```
+
 ## License
 ```
 Copyright (C) 2020, Tal Zaidman
+```
 
