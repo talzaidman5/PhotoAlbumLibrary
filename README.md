@@ -30,28 +30,34 @@ dependencies {
 
 ## Usage
 ###### StepProgress Constructor:
-```java
+java
 
 // To create photo album from your activity define arrayList in your attributs -
+```
         private ArrayList<String>allPhotos = new ArrayList<>();
 	
 ```
    
 ## API
 // Then add to it all the URLs of the photos you want:
+```
         allPhotos.add("yourURL");
-
+```
 
 // to init the photo album use the init function
+```
           MainActivityLibrary.initImages(MainActivity.this,allPhotos);
-
+```
 // to add a photo use the addPhoto function
+```
           MainActivityLibrary.addPhoto(MainActivity.this,allPhotos);
-
+```
 // to delete a photo use the deletePhoto function
+```
           MainActivityLibrary.deletePhoto(MainActivity.this,allPhotos);
-
+```
 // to open the photo album use the openAlbum function
+```
           MainActivityLibrary.openAlbum(MainActivity.this,allPhotos);
  ```
 
