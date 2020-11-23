@@ -39,12 +39,12 @@ java
 ```
    
 ## API
- Then add to it all the URLs of the photos you want:
+// Then add to it all the URLs of the photos you want:
 ```
         allPhotos.add("yourURL");
 ```
 
-	To init the photo album use the init function
+//	To init the photo album use the init function
 ```
           MainActivityLibrary.initImages(MainActivity.this,allPhotos);
 ```
@@ -52,11 +52,11 @@ java
 ```
           MainActivityLibrary.addPhoto(MainActivity.this,allPhotos);
 ```
-// to delete a photo use the deletePhoto function
+// To delete a photo use the deletePhoto function
 ```
           MainActivityLibrary.deletePhoto(MainActivity.this,allPhotos);
 ```
-// to open the photo album use the openAlbum function
+// To open the photo album use the openAlbum function
 ```
           MainActivityLibrary.openAlbum(MainActivity.this,allPhotos);
  ```
