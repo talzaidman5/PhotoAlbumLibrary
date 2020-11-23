@@ -5,7 +5,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/talzaidman5/PhotoAlbumLibrary)
 ```
 Photo Album Library
-Use this libary to use files from you device storage
+Use this libary to add photo album to your app
 ```
 ## Setup
 
