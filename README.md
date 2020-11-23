@@ -1,6 +1,4 @@
 # PhotoAlbumLibrary
-
-### FilesSelector
 [![](https://jitpack.io/v/talzaidman5/PhotoAlbumLibrary.svg)](https://jitpack.io/#talzaidman5/PhotoAlbumLibrary)
 [![API](https://img.shields.io/badge/API-18%2B-green.svg?style=flat)]()
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Photo%20Album%20Library%20-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7577)
