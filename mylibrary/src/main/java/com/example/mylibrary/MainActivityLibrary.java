@@ -2,20 +2,15 @@ package com.example.mylibrary;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Handler;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.util.ArrayList;
 
 public class MainActivityLibrary {
@@ -47,7 +42,6 @@ public class MainActivityLibrary {
             }
         });
 
-//    openAlbum(activity,allImages);
        openD(allImages.size());
     }
 
@@ -83,7 +77,7 @@ public class MainActivityLibrary {
         }
     }
     public static void openAlbum(Activity activity, ArrayList<String> allImages){
-        resrsh();
+        refresh();
         for (int i = 0; i < arrayOfImages.size(); i++) {
             String url = allImages.get(i);
             if (url.isEmpty()) {
@@ -98,7 +92,7 @@ public class MainActivityLibrary {
         }
     }
 
-    private static void resrsh() {
+    private static void refresh() {
         for (int i = 0; i < arrayOfImages.size(); i++)
             arrayOfImages.get(i).getImageView().setBackgroundResource(R.drawable.rectangle);
 
@@ -114,15 +108,6 @@ public class MainActivityLibrary {
         }
     }
 
-    private static void removeImage(ArrayList<Image> arrayOfImages, Image imageToDelete) {
-        for (int i = 0; i < arrayOfImages.size(); i++) {
-            if(arrayOfImages.get(i).equals(imageToDelete)) {
-                for (int j = i; j < arrayOfImages.size()-1; j++)
-                    arrayOfImages.get(j).setImageView(arrayOfImages.get(j + 1).getImageView());
-                return;
-            }
-        }
-    }
 
     private static void init(ArrayList<String>arrayList) {
         findView(view);
