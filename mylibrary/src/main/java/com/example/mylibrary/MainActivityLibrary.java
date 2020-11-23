@@ -69,7 +69,7 @@ public class MainActivityLibrary {
 
 
     }
-    public static void addImage(String urlToAdd,Activity activity,ArrayList<String>arrayList){
+    public static void addPhoto(String urlToAdd, Activity activity, ArrayList<String>arrayList){
             if (urlToAdd.isEmpty()) {
             Toast.makeText( activity,"Error", Toast.LENGTH_SHORT).show();
             } else {
@@ -104,7 +104,7 @@ public class MainActivityLibrary {
 
     }
 
-    public static void deleteImage(String urlToDelete,ArrayList<String>arrayListURL){
+    public static void deletePhoto(String urlToDelete, ArrayList<String>arrayListURL){
         for (Image image:arrayOfImages) {
             if(image.getURL().equals(urlToDelete)) {
                 arrayListURL.remove(urlToDelete);
