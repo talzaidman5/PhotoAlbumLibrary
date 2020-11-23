@@ -59,8 +59,7 @@ To create photo album from your activity define arrayList in your attributs -
           MainActivityLibrary.openAlbum(MainActivity.this,allPhotos);
  ```
 ## Images
-<img src="https://raw.githubusercontent.com/talzaidman5/PhotoAlbumLibrary-Android/master/image.jpg" width="288">
-
+<img src="https://raw.githubusercontent.com/talzaidman5\PhotoAlbum\drawableLibraryimage.jpg" width="288">
 ## License
 ```
 Copyright (C) 2020, Tal Zaidman
