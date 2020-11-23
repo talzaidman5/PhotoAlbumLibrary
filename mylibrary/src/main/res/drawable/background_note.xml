@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape
+        android:shape="oval">
+        <stroke
+            android:width="2sp"
+            android:color="@color/design_default_color_primary_dark"></stroke>
+    </shape>
+</item>
+    <item
+        android:bottom="3sp"
+        android:left="3sp"
+        android:right="3sp"
+        android:top="3sp">
+        <shape android:shape="oval">
+            <stroke
+                android:width="6dp"
+                android:color="@color/cardview_dark_background"></stroke>
+        </shape>
+    </item>
+<item
+    android:bottom="3sp"
+    android:left="3sp"
+    android:right="3sp"
+    android:top="3sp">
+    <shape android:shape="oval"
+        android:color="@color/cardview_dark_background"></shape>
+</item>
+</layer-list>
