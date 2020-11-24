@@ -22,7 +22,7 @@ allprojects {
 Step 2. Add the dependency:
 ```
 dependencies {
-	       implementation 'com.github.talzaidman5:PhotoAlbumLibrary:1.0.2'
+	       implementation 'com.github.talzaidman5:PhotoAlbumLibrary:1.0.3'
 }
 ```
 
@@ -44,19 +44,19 @@ To create photo album from your activity define arrayList in your attributs -
 
 //To init the photo album use the init function
 ```
-          MainActivityLibrary.initImages(MainActivity.this,allPhotos);
+        MainActivityLibrary.initImages(MainActivity.this);
 ```
 //To add a photo use the addPhoto function
 ```
-          MainActivityLibrary.addPhoto(MainActivity.this,allPhotos);
+        MainActivityLibrary.addPhoto("urlToAdd",allPhotos);
 ```
 //To delete a photo use the deletePhoto function
 ```
-          MainActivityLibrary.deletePhoto(MainActivity.this,allPhotos);
+        MainActivityLibrary.deletePhoto("urlToDelete",allPhotos);
 ```
 //To open the photo album use the openAlbum function
 ```
-          MainActivityLibrary.openAlbum(MainActivity.this,allPhotos);
+        MainActivityLibrary.openAlbum(MainActivity.this,allPhotos);
  ```
 ## License
 ```
