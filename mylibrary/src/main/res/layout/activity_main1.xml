@@ -9,15 +9,15 @@
     android:background="@drawable/rectangle"
     android:orientation="vertical"
     tools:ignore="MissingDefaultResource">
-<TextView
+  <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="15dp"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
-    android:textColor="#000000"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:textColor="#000000"
       android:id="@+id/title"
-    android:text="My photo album"
+      android:text="My photo album"
       android:textSize="30dp"
       android:textStyle="bold">
   </TextView>
@@ -29,166 +29,15 @@
       android:layout_below="@id/title"
       android:layout_above="@+id/activity_main_BTN_back"
       tools:ignore="NotSibling">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
-      android:gravity="center"
-      android:orientation="horizontal">
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_1"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_2"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_3"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-  </LinearLayout>
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
-      android:gravity="center"
-      android:orientation="horizontal">
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_4"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_5"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_6"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-  </LinearLayout>
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
-      android:orientation="horizontal">
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_7"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_8"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_9"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-  </LinearLayout>
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
-      android:orientation="horizontal">
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_10"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_11"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_12"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-  </LinearLayout>
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
-      android:orientation="horizontal">
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_13"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_14"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:id="@+id/activity_main_IMG_15"
-        android:src="@drawable/rectangle"
-        ></ImageView>
-  </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/lin"
+        android:orientation="vertical">
 
-</LinearLayout>
-</ScrollView>
+    </LinearLayout>
+  </ScrollView>
 
   <Button
       android:layout_width="wrap_content"
