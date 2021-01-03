@@ -22,7 +22,7 @@ allprojects {
 Step 2. Add the dependency:
 ```
 dependencies {
-	        implementation 'com.github.talzaidman5:PhotoAlbumLibrary:1.0.5'
+	        implementation 'com.github.talzaidman5:PhotoAlbumLibrary:1.0.6'
 }
 ```
 
