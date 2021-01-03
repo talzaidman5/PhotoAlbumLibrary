@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,13 +23,14 @@ public class MainActivityLibrary {
     public static AlertDialog dialog= null;
     public static LinearLayout linearLayout1;
     public static LinearLayout linearLayout;
-
+    public static TextView title;
     public static void initImages(Activity activity) {
 
         final LayoutInflater inflater = activity.getLayoutInflater();
         view = inflater.inflate(R.layout.activity_main1, null);
         linearLayout1 = view.findViewById(R.id.lin);
         activity_main_BTN_back = view.findViewById(R.id.activity_main_BTN_back);
+        title = view.findViewById(R.id.title);
         linearLayout1.setGravity(Gravity.CENTER);
     }
 
@@ -50,7 +52,9 @@ public class MainActivityLibrary {
 
 
     }
-
+    public static void changeTitle(String titleToChange){
+        title.setText(titleToChange);
+    }
     public static void addPhoto(String urlToAdd, ArrayList<String>arrayList){
         arrayList.add(urlToAdd);
     }
@@ -69,7 +73,7 @@ public class MainActivityLibrary {
                 linearLayout.setGravity(Gravity.RIGHT);
                 linearLayout1.setGravity(Gravity.RIGHT);
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-                linearLayout.setPadding(3, 3, 3, 3);
+                linearLayout.setPadding(5, 5, 5, 5);
             }
             if (url.isEmpty()) {
                 Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
