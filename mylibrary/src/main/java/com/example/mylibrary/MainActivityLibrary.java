@@ -24,6 +24,8 @@ public class MainActivityLibrary {
     public static LinearLayout linearLayout1;
     public static LinearLayout linearLayout;
     public static TextView title;
+    public static int numberOfImageInRow=3, WIDTH =270,LENGTH=270;
+
     public static void initImages(Activity activity) {
 
         final LayoutInflater inflater = activity.getLayoutInflater();
@@ -58,7 +60,11 @@ public class MainActivityLibrary {
     public static void changeButtonColor(int colorButton){
         activity_main_BTN_back.setBackgroundColor(colorButton);
     }
-
+    public static void numberOfImageInRow(int number, int length, int width){
+        numberOfImageInRow = number;
+        LENGTH=length;
+        WIDTH = width;
+    }
     public static void addPhoto(String urlToAdd, ArrayList<String>arrayList){
         arrayList.add(urlToAdd);
     }
@@ -71,14 +77,13 @@ public class MainActivityLibrary {
         int count = 0;
         for (int i = 0; i < allImages.size(); i++, count++) {
             String url = allImages.get(i);
-            if (count % 3 == 0) {
+            if (count % numberOfImageInRow == 0) {
                 linearLayout = new LinearLayout(activity);
                 linearLayout1.addView(linearLayout);
-                linearLayout.setGravity(Gravity.RIGHT);
-                linearLayout1.setGravity(Gravity.RIGHT);
+                linearLayout.setGravity(Gravity.CENTER);
+                linearLayout1.setGravity(Gravity.CENTER);
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
                 linearLayout.setPadding(3, 1, 3, 3);
-//                linearLayout1.setma(5, 5, 5, 5);
             }
             if (url.isEmpty()) {
                 Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
@@ -87,7 +92,7 @@ public class MainActivityLibrary {
                     ImageView image = new ImageView(activity);
                     LoadImage loadImage = new LoadImage(image);
                     image.setBackgroundDrawable(Drawable.createFromPath(url));
-                    TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(270, 270);
+                    TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(WIDTH, LENGTH);
                     image.setLayoutParams(layoutParams);
                     linearLayout.addView(image);
                     image.setPadding(8, 8, 8, 8);
