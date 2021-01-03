@@ -58,6 +58,9 @@ public class MainActivityLibrary {
     public static void changeButtonText(String textButton){
         activity_main_BTN_back.setText(textButton);
     }
+    public static void changeButtonColor(int colorButton){
+        activity_main_BTN_back.setBackgroundColor(colorButton);
+    }
 
     public static void addPhoto(String urlToAdd, ArrayList<String>arrayList){
         arrayList.add(urlToAdd);
