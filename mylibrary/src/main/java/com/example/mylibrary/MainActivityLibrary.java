@@ -44,13 +44,10 @@ public class MainActivityLibrary {
                public void run() {
                    count[0]++;
                    MySignal.animation(arrayOfImages.get(count[0]).getImageView());
-                   if (count[0] < numberOfImage) {
+                   if (count[0] < numberOfImage)
                        handler.postDelayed(this, 700);
-                   }
                }
            };
-
-
     }
     public static void changeTitle(String titleToChange){
         title.setText(titleToChange);
