@@ -55,6 +55,10 @@ public class MainActivityLibrary {
     public static void changeTitle(String titleToChange){
         title.setText(titleToChange);
     }
+    public static void changeButtonText(String textButton){
+        activity_main_BTN_back.setText(textButton);
+    }
+
     public static void addPhoto(String urlToAdd, ArrayList<String>arrayList){
         arrayList.add(urlToAdd);
     }
@@ -73,7 +77,8 @@ public class MainActivityLibrary {
                 linearLayout.setGravity(Gravity.RIGHT);
                 linearLayout1.setGravity(Gravity.RIGHT);
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-                linearLayout.setPadding(5, 5, 5, 5);
+                linearLayout.setPadding(3, 1, 3, 3);
+//                linearLayout1.setma(5, 5, 5, 5);
             }
             if (url.isEmpty()) {
                 Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
@@ -85,6 +90,7 @@ public class MainActivityLibrary {
                     TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(270, 270);
                     image.setLayoutParams(layoutParams);
                     linearLayout.addView(image);
+                    image.setPadding(8, 8, 8, 8);
                     loadImage.execute(url);
                 }
             }
