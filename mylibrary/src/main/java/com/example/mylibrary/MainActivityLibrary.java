@@ -17,6 +17,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 import java.util.ArrayList;
 
 public class MainActivityLibrary {
@@ -31,6 +33,7 @@ public class MainActivityLibrary {
     public static TextView title;
     public static int[]allChoosen;
     public static int numberOfImageInRow=3, WIDTH =270,LENGTH=270;
+    public static ImageView currentChooserImage;
 
     public static void initImages(Activity activity) {
 
@@ -41,7 +44,6 @@ public class MainActivityLibrary {
         title = view.findViewById(R.id.title);
         linearLayout1.setGravity(Gravity.CENTER);
     }
-
 
     public static void openD(int numberOfImage ) {
 
@@ -74,7 +76,12 @@ public class MainActivityLibrary {
     public static void addPhoto(String urlToAdd, ArrayList<String>arrayList){
         arrayList.add(urlToAdd);
     }
-    public static void openAlbum(Activity activity, ArrayList<String> allImages) {
+
+    public interface OnImageClickedCallBack {
+        void onImageClicked(ImageView image);
+    }
+
+    public static void openAlbum(Activity activity, ArrayList<String> allImages, @Nullable  OnImageClickedCallBack callBack) {
         allChoosen =new int[allImages.size()];
         final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
@@ -106,7 +113,10 @@ public class MainActivityLibrary {
                         @Override
                         public void onClick(View v) {
                             allChoosen[finalI] = 1;
-                          //  Toast.makeText(activity, finalI+"", Toast.LENGTH_SHORT).show();
+                            currentChooserImage = image;
+                            Toast.makeText(activity,"Image Chosen", Toast.LENGTH_SHORT).show();
+                            if (callBack != null)
+                                callBack.onImageClicked(image);
                         }
                     });
                     linearLayout.addView(image);
