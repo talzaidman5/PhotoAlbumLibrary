@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,8 +25,11 @@ public class MainActivityLibrary {
     public static ArrayList<Image> arrayOfImages;
     public static AlertDialog dialog= null;
     public static LinearLayout linearLayout1;
+    public static LinearLayout linearprogressBar;
+    public static ProgressBar progressBar;
     public static LinearLayout linearLayout;
     public static TextView title;
+    public static int[]allChoosen;
     public static int numberOfImageInRow=3, WIDTH =270,LENGTH=270;
 
     public static void initImages(Activity activity) {
@@ -69,6 +75,7 @@ public class MainActivityLibrary {
         arrayList.add(urlToAdd);
     }
     public static void openAlbum(Activity activity, ArrayList<String> allImages) {
+        allChoosen =new int[allImages.size()];
         final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
         linearLayout1.setOrientation(LinearLayout.VERTICAL);
@@ -94,9 +101,18 @@ public class MainActivityLibrary {
                     image.setBackgroundDrawable(Drawable.createFromPath(url));
                     TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(WIDTH, LENGTH);
                     image.setLayoutParams(layoutParams);
+                    int finalI = i;
+                    image.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            allChoosen[finalI] = 1;
+                          //  Toast.makeText(activity, finalI+"", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                     linearLayout.addView(image);
                     image.setPadding(8, 8, 8, 8);
                     loadImage.execute(url);
+
                 }
             }
         }
