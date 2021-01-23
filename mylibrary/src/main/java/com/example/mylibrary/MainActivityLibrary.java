@@ -25,14 +25,14 @@ public class MainActivityLibrary {
     public static View view;
     public static Button activity_main_BTN_back;
     public static ArrayList<Image> arrayOfImages;
-    public static AlertDialog dialog= null;
+    public static AlertDialog dialog = null;
     public static LinearLayout linearLayout1;
     public static LinearLayout linearprogressBar;
     public static ProgressBar progressBar;
     public static LinearLayout linearLayout;
     public static TextView title;
-    public static int[]allChoosen;
-    public static int numberOfImageInRow=3, WIDTH =270,LENGTH=270;
+    public static int[] allChoosen;
+    public static int numberOfImageInRow = 3, WIDTH = 270, LENGTH = 270;
     public static ImageView currentChooserImage;
 
     public static void initImages(Activity activity) {
@@ -45,44 +45,49 @@ public class MainActivityLibrary {
         linearLayout1.setGravity(Gravity.CENTER);
     }
 
-    public static void openD(int numberOfImage ) {
+    public static void openD(int numberOfImage) {
 
-           final Handler handler = new Handler();
+        final Handler handler = new Handler();
         final int[] count = {0};
 
-           final Runnable runnable = new Runnable() {
-               public void run() {
-                   count[0]++;
-                   MySignal.animation(arrayOfImages.get(count[0]).getImageView());
-                   if (count[0] < numberOfImage)
-                       handler.postDelayed(this, 700);
-               }
-           };
+        final Runnable runnable = new Runnable() {
+            public void run() {
+                count[0]++;
+                MySignal.animation(arrayOfImages.get(count[0]).getImageView());
+                if (count[0] < numberOfImage)
+                    handler.postDelayed(this, 700);
+            }
+        };
     }
-    public static void changeTitle(String titleToChange){
+
+    public static void changeTitle(String titleToChange) {
         title.setText(titleToChange);
     }
-    public static void changeButtonText(String textButton){
+
+    public static void changeButtonText(String textButton) {
         activity_main_BTN_back.setText(textButton);
     }
-    public static void changeButtonColor(int colorButton){
+
+    public static void changeButtonColor(int colorButton) {
         activity_main_BTN_back.setBackgroundColor(colorButton);
     }
-    public static void numberOfImageInRow(int number, int length, int width){
+
+    public static void numberOfImageInRow(int number, int length, int width) {
         numberOfImageInRow = number;
-        LENGTH=length;
+        LENGTH = length;
         WIDTH = width;
     }
-    public static void addPhoto(String urlToAdd, ArrayList<String>arrayList){
+
+    public static void addPhoto(String urlToAdd, ArrayList<String> arrayList) {
         arrayList.add(urlToAdd);
     }
 
     public interface OnImageClickedCallBack {
-        void onImageClicked(ImageView image);
+        void onImageClicked(ImageView image, String imageUrl);
     }
 
-    public static void openAlbum(Activity activity, ArrayList<String> allImages, @Nullable  OnImageClickedCallBack callBack) {
-        allChoosen =new int[allImages.size()];
+    public static void openAlbum(Activity activity, ArrayList<String> allImages, @Nullable OnImageClickedCallBack callBack) {
+        allChoosen = new int[allImages.size()];
         final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
         linearLayout1.setOrientation(LinearLayout.VERTICAL);
@@ -114,9 +119,9 @@ public class MainActivityLibrary {
                         public void onClick(View v) {
                             allChoosen[finalI] = 1;
                             currentChooserImage = image;
-                            Toast.makeText(activity,"Image Chosen", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity, "Image Chosen", Toast.LENGTH_SHORT).show();
                             if (callBack != null)
-                                callBack.onImageClicked(image);
+                                callBack.onImageClicked(image, url);
                         }
                     });
                     linearLayout.addView(image);
@@ -138,9 +143,9 @@ public class MainActivityLibrary {
         openD(allImages.size());
     }
 
-    public static void deletePhoto(String urlToDelete, ArrayList<String>arrayListURL){
-        for (String url:arrayListURL) {
-            if(url.equals(urlToDelete)) {
+    public static void deletePhoto(String urlToDelete, ArrayList<String> arrayListURL) {
+        for (String url : arrayListURL) {
+            if (url.equals(urlToDelete)) {
                 arrayListURL.remove(urlToDelete);
                 return;
             }
